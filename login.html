@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In - PROJECT #Ginhawa</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<script type="module" src="../js/login.js"></script>
+<nav>
+  <div class="nav-auth">
+    <a href="#" class="btn-ghost">Log In</a>
+    <a href="signin.html" class="btn-solid">Sign Up</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="items.html">All Items</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="home.html" class="nav-brand">PR🔍JECT #Ginhawa</a>
+</nav>
+
+<div class="auth-page">
+
+  <!-- FORM PANEL -->
+  <div class="auth-right">
+    <div class="form-card">
+
+      <div class="form-logo">PR🔍JECT #Ginhawa</div>
+      <h2 class="form-heading">Welcome Back,<br>Kabsuhenyo! 👋</h2>
+      <p class="form-subtext">Log in to access your personal dashboard and manage your reports.</p>
+
+      <div class="alert alert-error" id="errorAlert">
+        <span class="alert-icon">⚠️</span>
+        <span id="errorMsg">Invalid email or password. Please try again.</span>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="success-state" id="successState">
+        <div class="success-circle">🏠</div>
+        <div class="success-title">Welcome to your dashboard!</div>
+        <div class="success-name" id="welcomeName"></div>
+        <p class="success-msg">Logged in successfully.<br>Taking you to your dashboard...</p>
+        <div class="redirect-bar"><div class="redirect-fill" id="redirectFill"></div></div>
+      </div>
+
+      <!-- FORM -->
+      <form id="loginForm" novalidate>
+        <div class="field-group">
+
+          <div class="field">
+            <label>Email Address *</label>
+            <div class="field-wrap">
+              <span class="field-icon">✉️</span>
+              <input type="email" id="emailInput" placeholder="yourname@gmail.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Password *</label>
+            <div class="field-wrap">
+              <span class="field-icon">🔒</span>
+              <input type="password" id="pwdInput" placeholder="Your password" autocomplete="current-password">
+              <button type="button" class="pwd-toggle" id="pwdToggle">👁️</button>
+            </div>
+          </div>
+
+          <div class="remember-row">
+            <label class="remember-check">
+              <input type="checkbox" id="rememberMe"> Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-login" id="loginBtn">
+            <span id="btnText">Log In</span>
+            <div class="spinner" id="btnSpinner"></div>
+          </button>
+          <button type="button" class="btn-clear" id="clearBtn">Clear Fields</button>
+        </div>
+      </form>
+
+      <p class="form-footer">
+        Don't have an account? <a href="signin.html">Sign up here →</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="auth-left">
+    <div class="left-brand">PR🔍JECT #<em>Ginhawa</em></div>
+    <p class="left-tagline">PR🔍JECT #Ginhawa · CvSU's Digital Safety Net</p>
+    <div class="welcome-card">
+      <div class="welcome-card-title">🌿 Good to have you back.</div>
+      <p>Your dashboard awaits. Create or track reports, check on updates, and stay connected with the Kabsuhenyo community — all in one place.</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-mini"><div class="stat-val" id="login-stat-items">—</div><div class="stat-lbl">Items Logged</div></div>
+      <div class="stat-mini"><div class="stat-val" id="login-stat-resolved">—</div><div class="stat-lbl">Reunited</div></div>
+      <div class="stat-mini"><div class="stat-val" id="login-stat-members">—</div><div class="stat-lbl">Members</div></div>
+    </div>
+    <p class="left-no-account">New here? <a href="signin.html">Create a free account →</a></p>
+  </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — oopsFOUND! | PROJECT #Ginhawa</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/signin.css">
+</head>
+<body>
+<script type="module" src="../js/signin.js"></script>
+<nav>
+  <div class="nav-auth">
+    <a href="login.html" class="btn-ghost">Log In</a>
+    <a href="#" class="btn-solid">Sign Up</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="items.html">All Items</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="home.html" class="nav-brand">PR🔍JECT #Ginhawa</a>
+</nav>
+
+<div class="auth-page">
+
+  <!-- LEFT -->
+  <div class="auth-left">
+    <div class="left-badge">✦ PR🔍JECT #Ginhawa</div>
+    <h1 class="left-headline">Join the<br><em>Kabsuhenyo</em><br>safety net.</h1>
+    <p class="left-desc">Create your free account and become part of the CvSU community that looks out for one another. No institutional email needed.</p>
+    <div class="left-perks">
+      <div class="perk"><div class="perk-dot">🔍</div>Report lost or found items in seconds</div>
+      <div class="perk"><div class="perk-dot">📡</div>Real-time updates — no more Facebook scrolling</div>
+      <div class="perk"><div class="perk-dot">🤝</div>Direct contact with finders and owners</div>
+      <div class="perk"><div class="perk-dot">🏫</div>Covers all CvSU campuses</div>
+    </div>
+    <p class="left-already">Already have an account? <a href="login.html">Log in here →</a></p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="auth-right">
+    <div class="form-card">
+
+      <div class="form-steps">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+      </div>
+
+      <h2 class="form-heading">Create an Account</h2>
+      <p class="form-subtext">Join the Kabsuhenyos safety net. No institutional email required!</p>
+
+      <div class="alert alert-error" id="errorAlert">
+        <span class="alert-icon">⚠️</span>
+        <span id="errorMsg">Please fill out all required fields.</span>
+      </div>
+
+      <div class="success-state" id="successState">
+        <div class="success-circle">🎉</div>
+        <div class="success-title">Welcome aboard, <span id="successName">Kabsuhenyo</span>!</div>
+        <p class="success-msg">Account created successfully.<br>Redirecting you to login...</p>
+        <div class="redirect-bar"><div class="redirect-fill" id="redirectFill"></div></div>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <div class="field-group">
+
+          <div class="field">
+            <label>Full Name *</label>
+            <div class="field-wrap">
+              <span class="field-icon">👤</span>
+              <input type="text" id="fullName" placeholder="e.g. Juan Dela Cruz" autocomplete="name">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>College / Department *</label>
+            <div class="field-wrap select-wrap">
+              <span class="field-icon">🏛️</span>
+              <select id="collegeDept">
+                <option value="" disabled selected>Select your college</option>
+                <option value="CEIT">CEIT — College of Engineering, Information and Technology</option>
+                <option value="CAS">CAS — College of Arts and Sciences</option>
+                <option value="CCJ">CCJ — College of Criminal Justice</option>
+                <option value="CED">CED — College of Education</option>
+                <option value="CON">CON — College of Nursing</option>
+                <option value="CAFENR">CAFENR — Agriculture, Food, Environment and Natural Resources</option>
+                <option value="CVMBS">CVMBS — College of Veterinary Medicine and Biomedical Sciences</option>
+                <option value="CSPEAR">CSPEAR — Sports, Physical Education and Recreation</option>
+                <option value="CEMDS">CEMDS — Economics, Management and Development Studies</option>
+                <option value="CTHM">CTHM — College of Tourism and Hospitality Management</option>
+                <option value="COM">COM — College of Medicine</option>
+                <option value="CvSU Bacoor Campus">CvSU Bacoor Campus</option>
+                <option value="CvSU Carmona Campus">CvSU Carmona Campus</option>
+                <option value="CvSU Cavite City Campus">CvSU Cavite City Campus</option>
+                <option value="CvSU CCAT Campus">CvSU CCAT Campus</option>
+                <option value="CvSU General Trias City Campus">CvSU General Trias City Campus</option>
+                <option value="CvSU Imus Campus">CvSU Imus Campus</option>
+                <option value="CvSU Maragondon Campus">CvSU Maragondon Campus</option>
+                <option value="CvSU Naic Campus">CvSU Naic Campus</option>
+                <option value="CvSU Silang Campus">CvSU Silang Campus</option>
+                <option value="CvSU Tanza Campus">CvSU Tanza Campus</option>
+                <option value="CvSU Trece Martires City Campus">CvSU Trece Martires City Campus</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Social Media URL <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.75rem;">(optional)</span></label>
+            <div class="field-wrap">
+              <span class="field-icon">🔗</span>
+              <input type="url" id="socialMedia" placeholder="https://facebook.com/yourprofile">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email Address *</label>
+            <div class="field-wrap">
+              <span class="field-icon">✉️</span>
+              <input type="email" id="emailAddress" placeholder="yourname@gmail.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Password *</label>
+            <div class="field-wrap">
+              <span class="field-icon">🔒</span>
+              <input type="password" id="password" placeholder="Min. 6 characters" autocomplete="new-password">
+              <button type="button" class="pwd-toggle" id="pwdToggle">👁️</button>
+            </div>
+            <div class="pwd-strength">
+              <div class="pwd-bar"><div class="pwd-fill" id="pwdFill"></div></div>
+              <div class="pwd-label" id="pwdLabel">Enter a password</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-divider">create your account</div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-register" id="registerBtn">
+            <span id="btnText">Register Account</span>
+            <div class="spinner" id="btnSpinner"></div>
+          </button>
+          <button type="button" class="btn-clear" id="clearBtn">Clear</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

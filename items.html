@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Items — PROJECT #Ginhawa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/all-items.css">
+</head>
+<body>
+<script type="module" src="../js/all-items.js"></script>
+
+
+
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="toggle-btn" id="toggleSidebar">⟨</button>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <div class="user-info">
+          <div class="user-name" id="userName">USER</div>
+          <div class="user-role">Finder</div>
+        </div>
+      </div>
+
+        <a class="nav-item active" href="items.html" data-tip="All Items">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-label">Lost & Found</span>
+        </a>
+        <a class="nav-item" href="home.html" data-tip="Home">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Home</span>
+        </a>
+        <a class="nav-item" href="about.html" data-tip="About Us">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">About Us</span>
+        </a>
+        <a class="nav-item" href="contact.html" data-tip="Contact Us">
+          <span class="nav-icon">📬</span>
+          <span class="nav-label">Contact Us</span>
+        </a>
+
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <h1 class="page-title">All Items</h1>
+        <p class="page-subtitle">Browse all lost & found items reported by the community</p>
+      </div>
+
+      <!-- PAGE CONTENT -->
+      <div class="page-content">
+        <!-- SEARCH & FILTERS -->
+        <div class="search-bar-wrap">
+          <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search items by name, location, category..."
+            />
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="lost">Lost</button>
+            <button class="filter-btn" data-filter="found">Found</button>
+            <button class="filter-btn" data-filter="resolved">Resolved</button>
+          </div>
+          <select class="sort-dropdown" id="campusFilter">
+            <option value="all">All Campuses</option>
+            <optgroup label="🏛️ CvSU Main Campus — Indang">
+              <option value="Main Campus — CEIT">CEIT</option>
+              <option value="Main Campus — CED">CED</option>
+              <option value="Main Campus — CAS">CAS</option>
+              <option value="Main Campus — CCJ">CCJ</option>
+              <option value="Main Campus — CON">CON</option>
+              <option value="Main Campus — CVMBS">CVMBS</option>
+              <option value="Main Campus — CEMDS">CEMDS</option>
+              <option value="Main Campus — CSPEAR">CSPEAR</option>
+              <option value="Main Campus — CAFENR">CAFENR</option>
+              <option value="Main Campus — CTHM">CTHM</option>
+              <option value="Main Campus — COM">COM</option>
+            </optgroup>
+            <optgroup label="🏫 Other CvSU Campuses">
+              <option value="CvSU Naic Campus">Naic</option>
+              <option value="CvSU Tanza Campus">Tanza</option>
+              <option value="CvSU General Trias Campus">General Trias</option>
+              <option value="CvSU Dasmariñas Campus">Dasmariñas</option>
+              <option value="CvSU Carmona Campus">Carmona</option>
+              <option value="CvSU Silang Campus">Silang</option>
+              <option value="CvSU Imus Campus">Imus</option>
+              <option value="CvSU Bacoor Campus">Bacoor</option>
+              <option value="CvSU Cavite City Campus">Cavite City</option>
+              <option value="CCAT Campus">CCAT</option>
+              <option value="CvSU Amadeo Campus">Amadeo</option>
+              <option value="CvSU Maragondon Campus">Maragondon</option>
+            </optgroup>
+          </select>
+          <select class="sort-dropdown" id="sortDropdown">
+            <option value="recent">Most Recent</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+
+        <!-- ACTIVE FILTERS -->
+        <div class="active-filters" id="activeFilters"></div>
+
+        <!-- RESULTS INFO -->
+        <div class="results-info">
+          <span>Showing <span class="results-count" id="resultsCount">0</span> items</span>
+        </div>
+
+        <!-- ITEMS GRID -->
+        <div class="items-grid" id="itemsGrid"></div>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>No items found</h3>
+          <p>Try adjusting your search or filter criteria to find what you're looking for.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
